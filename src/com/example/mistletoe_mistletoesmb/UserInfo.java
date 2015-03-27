@@ -15,7 +15,7 @@ public class UserInfo {  //用户信息的存取方法
 	private String userMBName;
 	private String token;
 	private String tokenSecret;
-	private String userMBIcon;
+	private Drawable userMBIcon;
 	
 	public void setMDId(String mDId){
 		this.mDId = mDId;
@@ -32,8 +32,8 @@ public class UserInfo {  //用户信息的存取方法
 	public void setTokenSecret(String tokenSecret){
 		this.tokenSecret = tokenSecret;
 	}
-	public void setUserMBIcon(String userMBIcon){
-		this.userMBIcon = userMBIcon;
+	public void setUserMBIcon(Drawable icon){
+		this.userMBIcon = icon;
 	}
 	
 	public String getMDId(){
@@ -51,7 +51,7 @@ public class UserInfo {  //用户信息的存取方法
 	public String getTokenSecret(){
 		return tokenSecret;
 	}
-	public String getUserMBIcon(){
+	public Drawable getUserMBIcon(){
 		return userMBIcon;
 	}
 }

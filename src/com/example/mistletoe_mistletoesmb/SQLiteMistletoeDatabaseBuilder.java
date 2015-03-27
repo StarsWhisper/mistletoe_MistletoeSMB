@@ -9,10 +9,10 @@ import android.util.Log;
 //SQLiteOpenHelper提供后面两个重要方法，一个用于初次创建数据库，一个用于更新数据库
 
 //??????????????????????????updateColumn
-public class SQLiteMistletoeDatabase extends SQLiteOpenHelper{
+public class SQLiteMistletoeDatabaseBuilder extends SQLiteOpenHelper{
 //用来保存   UserID、Access Token、Access Secret 的表名 	 
 	public static final String TB_NAME="users";  
-	public SQLiteMistletoeDatabase(Context context, String name, CursorFactory factory, int version) {  
+	public SQLiteMistletoeDatabaseBuilder(Context context, String name, CursorFactory factory, int version) {  
 	super(context, name, factory, version);  
 	}  
 	//创建表  
