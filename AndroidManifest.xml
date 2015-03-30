@@ -11,18 +11,51 @@
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <application
-        android:icon="@drawable/ic_launcher"
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/mistletoe_logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
+        <!-- 主 Activity -->
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main" >
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <!-- 授权认证 -->
+        <activity android:name=".AuthorizeActivity" />
+
+        <!-- 社会化组件 -->
+        <activity android:name="com.sina.weibo.sdk.demo.SocialActivity"/>
+        
+        <!-- 登录/注销 -->
+        <activity android:name=".LoginActivity" />
+
+        <!-- OpenAPI -->
+        <activity android:name=".openapi.WBOpenAPIActivity" />
+        <activity android:name=".openapi.WBUserAPIActivity" />
+        <activity android:name=".openapi.WBStatusAPIActivity" />
+        <activity android:name=".openapi.WBCommentAPIActivity" />
+        <activity android:name=".openapi.WBInviteAPIActivity" />
+        <activity android:name=".openapi.WBLogoutAPIActivity" />
+
+        <!-- 其他 -->
+        <!-- <activity android:name=".WBCallActivityV3" /> -->
+        <!-- <activity android:name=".WBUserStateActivity" /> -->
+        
+        <!-- 必须注册在微博授权，分享微博时候用到 -->
+        <activity android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" 
+            android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" >
+        </activity>
+        <service android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false"></service>
     </application>
 
 </manifest>

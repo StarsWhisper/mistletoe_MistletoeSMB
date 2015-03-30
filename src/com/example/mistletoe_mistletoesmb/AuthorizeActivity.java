@@ -33,10 +33,10 @@ public class AuthorizeActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
         
-//        // 获取 Token View，并让提示 View 的内容可滚动（小屏幕可能显示不全）
-//        mTokenText = (TextView) findViewById(R.id.token_text_view);
-//        TextView hintView = (TextView) findViewById(R.id.obtain_token_hint);
-//        hintView.setMovementMethod(new ScrollingMovementMethod());
+        // 获取 Token View，并让提示 View 的内容可滚动（小屏幕可能显示不全）
+        mTokenText = (TextView) findViewById(R.id.token_text_view);
+        TextView hintView = (TextView) findViewById(R.id.obtain_token_hint);
+        hintView.setMovementMethod(new ScrollingMovementMethod());
 
         // 创建微博实例
         //mWeiboAuth = new WeiboAuth(this, Certificate.CONSUMER_KEY, Certificate.CALLBACK_URL, Certificate.SCOPE);
