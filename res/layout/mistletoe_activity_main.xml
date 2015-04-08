@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/layout"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/back_01">
+
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent" >
+
+      <RelativeLayout
+          android:id="@+id/iconBtn"
+          android:layout_width="150px"
+          android:layout_height="150px"
+          android:layout_above="@+id/selectLayout"
+          android:layout_centerHorizontal="true"
+          android:layout_marginBottom="40dip"
+          android:background="@drawable/ic_logo" >
+
+          <ImageView
+              android:id="@+id/headSculpture"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true" >
+          </ImageView>
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/selectLayout"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true" >
+      </RelativeLayout>
+
+      <ImageButton
+          android:id="@+id/mEnterWeibo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_marginBottom="26dp"
+          android:layout_marginLeft="27dp"
+          android:background="@drawable/mistletoe_enter"
+          android:onClick="myClick_EnterWeibo" />
+
+      <TextView
+          android:id="@+id/mySMBName"
+          android:layout_width="350px"
+          android:layout_height="50px"
+          android:layout_alignBottom="@+id/selectLayout"
+          android:layout_centerHorizontal="true"
+          android:editable="false"
+          android:enabled="false"
+          android:maxLength="10"
+          android:paddingLeft="20px"
+          android:textSize="40px" />
+
+  </RelativeLayout>
+
+</LinearLayout>

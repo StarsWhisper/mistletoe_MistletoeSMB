@@ -10,6 +10,21 @@
     tools:context=".WBAuthActivity" >
     
     <Button
+        android:id="@+id/obtain_token_via_sso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:text="@string/weibosdk_demo_obtain_token_via_sso" />
+    
+    <Button
+        android:id="@+id/obtain_token_via_web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left|center_vertical"
+        android:text="@string/weibosdk_demo_obtain_token_via_web" />
+    
+    <Button
         android:id="@+id/obtain_token_via_signature"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,6 +39,12 @@
         android:layout_marginTop="10dp"
         android:gravity="left|center_vertical"
         android:text="@string/weibosdk_demo_obtain_token_logout" />
+    <Button
+        android:id="@+id/enterMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:text="进入主界面" />
     
     <Button
         android:id="@+id/obtain_token_via_code"

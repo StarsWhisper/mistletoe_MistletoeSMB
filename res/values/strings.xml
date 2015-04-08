@@ -2,9 +2,6 @@
 <resources>
 
     <string name="app_name">槲寄生新浪微博客户端</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">槲寄生新浪微博客户端</string>
 
     <!-- 功能列表 -->
     <string name="weibosdk_demo_feature_oauth">微博授权</string>

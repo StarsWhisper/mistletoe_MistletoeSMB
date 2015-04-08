@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:background="@drawable/back_01"
+    >
+
+    <ImageButton
+        android:id="@+id/mrefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mistletoe_refresh"
+        android:onClick="myClick_mrefresh"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+         />
+
+    <ListView
+        android:id="@+id/weiboList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mrefresh"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:fastScrollEnabled="true"
+        android:focusable="true" 
+        android:cacheColorHint="#00000000"
+    />
+    <!-- 显示载入动画 -->
+		<LinearLayout  
+			android:id="@+id/loadingLayout"  
+			android:layout_width="wrap_content"  
+			android:layout_height="wrap_content"  
+			android:orientation="vertical"  
+			android:visibility="visible"  
+			android:layout_centerInParent="true">  
+			<!--载入进度条 -->
+			<ProgressBar  
+				android:id="@+id/loading"  
+				android:layout_width="47px"  
+				android:layout_height="47px"  
+				android:layout_gravity="center"  
+				style="@style/progressStyle" />   
+			<TextView  
+				android:layout_width="wrap_content"  
+				android:layout_height="wrap_content"  
+				android:text="正在载入"  
+				android:textSize="30px"  
+				android:textColor="#9c9c9c"  
+				android:layout_gravity="center"  
+				android:layout_below="@+id/loading" />  
+		</LinearLayout>  
+
+</RelativeLayout>
